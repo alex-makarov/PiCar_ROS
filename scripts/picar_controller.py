@@ -8,11 +8,15 @@ from SunFounder_PiCar import back_wheels
 import SunFounder_PiCar
 import time
 import math
+import sys
+import os
 
 SunFounder_PiCar.setup()
 
-fw = front_wheels.Front_Wheels(db='config')
-bw = back_wheels.Back_Wheels(db='config')
+path = os.path.abspath(os.path.dirname(sys.argv[0]))
+
+fw = front_wheels.Front_Wheels(db=path+'/config')
+bw = back_wheels.Back_Wheels(db=path+'/config')
 fw.turning_max = 30
 
 forward_speed = 50

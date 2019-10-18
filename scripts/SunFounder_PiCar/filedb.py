@@ -17,7 +17,7 @@ class fileDB(object):
     """
 	def __init__(self, db=None):
 		'''Init the db_file is a file to save the datas.'''
-
+		
 		# Check if db_file is defined
 		if db != None:
 			self.db = db
